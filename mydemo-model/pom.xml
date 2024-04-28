@@ -7,9 +7,9 @@
         <artifactId>mydemo-common</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>mydemo-model</artifactId>
+    <artifactId>mydemo-common-model</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mydemo-model</name>
+    <name>mydemo-common-model</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
