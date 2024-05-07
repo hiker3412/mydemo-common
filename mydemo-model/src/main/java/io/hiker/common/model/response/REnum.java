@@ -9,6 +9,9 @@ public enum REnum {
 
     //4000 客户端参数错误
     CLIENT_FAIL("4000","客户端异常"),
+    NOT_LOGIN("4001","未登录"),
+    NOT_AUTHORITY("4002","没有权限"),
+    SESSION_EXPIRED("4003","账号已在另一台设备登录"),
 
     //服务器发生异常
     FAIL("5000","系统异常");

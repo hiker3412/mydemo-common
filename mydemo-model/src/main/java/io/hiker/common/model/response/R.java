@@ -1,11 +1,12 @@
 package io.hiker.common.model.response;
 
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 @Data
 @Accessors(chain = true)
+@NoArgsConstructor
 public class R<T> {
     private String code;
     private String msg;
@@ -27,7 +28,7 @@ public class R<T> {
     }
 
     public static <T> R<T> success(T data) {
-        return new R<T>(REnum.SUCCESS,data);
+        return new R<T>(REnum.SUCCESS, data);
     }
 
     public static <T> R<T> fail() {
@@ -36,14 +37,6 @@ public class R<T> {
 
     public static <T> R<T> fail(String msg) {
         return new R<T>(REnum.FAIL).setMsg(msg);
-    }
-
-    public static <T> R<T> clientFail() {
-        return new R<T>(REnum.CLIENT_FAIL);
-    }
-
-    public static <T> R<T> clientFail(String msg) {
-        return new R<T>(REnum.CLIENT_FAIL).setMsg(msg);
     }
 
 }
